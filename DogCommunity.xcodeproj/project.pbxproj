@@ -14,6 +14,7 @@
 		FBCEE0301CD0254D00AEDF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCEE02E1CD0254D00AEDF7A /* LaunchScreen.storyboard */; };
 		FBCEE03B1CD0254D00AEDF7A /* DogCommunityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */; };
 		FBCEE0461CD0254D00AEDF7A /* DogCommunityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */; };
+		FBCEE0541CD0388400AEDF7A /* arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCEE0531CD0388400AEDF7A /* arrows.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FBCEE0411CD0254D00AEDF7A /* DogCommunityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogCommunityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCommunityUITests.swift; sourceTree = "<group>"; };
 		FBCEE0471CD0254D00AEDF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBCEE0531CD0388400AEDF7A /* arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrows.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				FBCEE0251CD0254D00AEDF7A /* AppDelegate.swift */,
 				FBCEE0271CD0254D00AEDF7A /* ViewController.swift */,
 				FBCEE0291CD0254D00AEDF7A /* Main.storyboard */,
+				FBCEE0531CD0388400AEDF7A /* arrows.png */,
 				FBCEE02C1CD0254D00AEDF7A /* Assets.xcassets */,
 				FBCEE02E1CD0254D00AEDF7A /* LaunchScreen.storyboard */,
 				FBCEE0311CD0254D00AEDF7A /* Info.plist */,
@@ -232,6 +235,7 @@
 				FBCEE0301CD0254D00AEDF7A /* LaunchScreen.storyboard in Resources */,
 				FBCEE02D1CD0254D00AEDF7A /* Assets.xcassets in Resources */,
 				FBCEE02B1CD0254D00AEDF7A /* Main.storyboard in Resources */,
+				FBCEE0541CD0388400AEDF7A /* arrows.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
