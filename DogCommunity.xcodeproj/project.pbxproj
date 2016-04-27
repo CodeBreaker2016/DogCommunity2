@@ -19,6 +19,7 @@
 		FB1F6AB71CD040F300D1D3DE /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F6AB61CD040F300D1D3DE /* dog.png */; };
 		FBCEE03B1CD0254D00AEDF7A /* DogCommunityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */; };
 		FBCEE0461CD0254D00AEDF7A /* DogCommunityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */; };
+		FBD11C741CD15B960097EF70 /* diggy_dog_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD11C731CD15B960097EF70 /* diggy_dog_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		FBCEE0411CD0254D00AEDF7A /* DogCommunityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogCommunityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCommunityUITests.swift; sourceTree = "<group>"; };
 		FBCEE0471CD0254D00AEDF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBD11C731CD15B960097EF70 /* diggy_dog_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diggy_dog_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				FB1F6AAB1CD040B500D1D3DE /* Info.plist */,
 				FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */,
 				FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */,
+				FBD11C731CD15B960097EF70 /* diggy_dog_2.png */,
 			);
 			path = DogCommunity;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD11C741CD15B960097EF70 /* diggy_dog_2.png in Resources */,
 				FB1F6AB71CD040F300D1D3DE /* dog.png in Resources */,
 				FB1F6AAF1CD040B500D1D3DE /* arrows.png in Resources */,
 				FB1F6AB31CD040B500D1D3DE /* Info.plist in Resources */,
