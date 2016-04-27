@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -30,29 +31,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Select & Confirm your location-->
         <scene sceneID="NDe-zI-8Ey">
             <objects>
-                <viewController id="fW0-hF-c1q" sceneMemberID="viewController">
+                <viewController id="fW0-hF-c1q" customClass="MapViewController" customModule="DogCommunity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bV6-u9-1UL"/>
                         <viewControllerLayoutGuide type="bottom" id="Dad-L9-Df7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aj0-fI-7FR">
+                    <view key="view" contentMode="scaleToFill" id="aj0-fI-7FR" customClass="Map">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7I-nT-GlJ">
-                                <rect key="frame" x="287" y="28" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51R-4v-ECx">
+                                <rect key="frame" x="60" y="64" width="480" height="360"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="51R-4v-ECx" firstAttribute="top" secondItem="bV6-u9-1UL" secondAttribute="bottom" id="GJg-1B-gLr"/>
+                            <constraint firstItem="51R-4v-ECx" firstAttribute="centerX" secondItem="aj0-fI-7FR" secondAttribute="centerX" id="Ktx-4X-Vp6"/>
+                            <constraint firstItem="51R-4v-ECx" firstAttribute="width" secondItem="aj0-fI-7FR" secondAttribute="width" multiplier="0.8" id="bVj-cU-sV9"/>
+                            <constraint firstItem="51R-4v-ECx" firstAttribute="height" secondItem="aj0-fI-7FR" secondAttribute="height" multiplier="0.6" id="lYE-Gl-dea"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Select &amp; Confirm your location" id="dUc-uy-AYz"/>
+                    <connections>
+                        <outlet property="map" destination="51R-4v-ECx" id="l3g-cR-yr2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfj-eO-1rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="1092"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wIg-JK-92t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJP-cz-cdg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H12-H9-uOE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fW0-hF-c1q" kind="relationship" relationship="rootViewController" id="xXs-lh-dEU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDE-lv-HDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="311" y="1092"/>
         </scene>

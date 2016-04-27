@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0938221CD02DB900F801D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0938211CD02DB900F801D2 /* MapKit.framework */; };
+		FB0938241CD02DF600F801D2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0938231CD02DF600F801D2 /* MapViewController.swift */; };
 		FBCEE0261CD0254D00AEDF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE0251CD0254D00AEDF7A /* AppDelegate.swift */; };
 		FBCEE0281CD0254D00AEDF7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE0271CD0254D00AEDF7A /* ViewController.swift */; };
 		FBCEE02B1CD0254D00AEDF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCEE0291CD0254D00AEDF7A /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB0938211CD02DB900F801D2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FB0938231CD02DF600F801D2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FBCEE0221CD0254D00AEDF7A /* DogCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE0251CD0254D00AEDF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCEE0271CD0254D00AEDF7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0938221CD02DB900F801D2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		FBCEE0191CD0254D00AEDF7A = {
 			isa = PBXGroup;
 			children = (
+				FB0938211CD02DB900F801D2 /* MapKit.framework */,
 				FBCEE0241CD0254D00AEDF7A /* DogCommunity */,
 				FBCEE0391CD0254D00AEDF7A /* DogCommunityTests */,
 				FBCEE0441CD0254D00AEDF7A /* DogCommunityUITests */,
@@ -103,6 +109,7 @@
 				FBCEE02C1CD0254D00AEDF7A /* Assets.xcassets */,
 				FBCEE02E1CD0254D00AEDF7A /* LaunchScreen.storyboard */,
 				FBCEE0311CD0254D00AEDF7A /* Info.plist */,
+				FB0938231CD02DF600F801D2 /* MapViewController.swift */,
 			);
 			path = DogCommunity;
 			sourceTree = "<group>";
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCEE0281CD0254D00AEDF7A /* ViewController.swift in Sources */,
+				FB0938241CD02DF600F801D2 /* MapViewController.swift in Sources */,
 				FBCEE0261CD0254D00AEDF7A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +492,7 @@
 				FBCEE04C1CD0254D00AEDF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FBCEE04D1CD0254D00AEDF7A /* Build configuration list for PBXNativeTarget "DogCommunityTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				FBCEE04F1CD0254D00AEDF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FBCEE0501CD0254D00AEDF7A /* Build configuration list for PBXNativeTarget "DogCommunityUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				FBCEE0521CD0254D00AEDF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
