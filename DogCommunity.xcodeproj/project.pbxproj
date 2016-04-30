@@ -20,6 +20,9 @@
 		FBCEE03B1CD0254D00AEDF7A /* DogCommunityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */; };
 		FBCEE0461CD0254D00AEDF7A /* DogCommunityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */; };
 		FBD11C741CD15B960097EF70 /* diggy_dog_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD11C731CD15B960097EF70 /* diggy_dog_2.png */; };
+		FBEA96421CD433A3006F5B6A /* add-contact2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEA96411CD433A3006F5B6A /* add-contact2.png */; };
+		FBEA96441CD433AC006F5B6A /* dog-paw2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEA96431CD433AC006F5B6A /* dog-paw2.png */; };
+		FBEA96461CD433B2006F5B6A /* pencil-22.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEA96451CD433B2006F5B6A /* pencil-22.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCommunityUITests.swift; sourceTree = "<group>"; };
 		FBCEE0471CD0254D00AEDF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBD11C731CD15B960097EF70 /* diggy_dog_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diggy_dog_2.png; sourceTree = "<group>"; };
+		FBEA96411CD433A3006F5B6A /* add-contact2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-contact2.png"; sourceTree = "<group>"; };
+		FBEA96431CD433AC006F5B6A /* dog-paw2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-paw2.png"; sourceTree = "<group>"; };
+		FBEA96451CD433B2006F5B6A /* pencil-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil-22.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 		FBCEE0191CD0254D00AEDF7A = {
 			isa = PBXGroup;
 			children = (
+				FBEA96451CD433B2006F5B6A /* pencil-22.png */,
+				FBEA96431CD433AC006F5B6A /* dog-paw2.png */,
+				FBEA96411CD433A3006F5B6A /* add-contact2.png */,
 				FB1F6AA31CD040B500D1D3DE /* DogCommunity */,
 				FB0938211CD02DB900F801D2 /* MapKit.framework */,
 				FBCEE0391CD0254D00AEDF7A /* DogCommunityTests */,
@@ -248,11 +257,14 @@
 			files = (
 				FBD11C741CD15B960097EF70 /* diggy_dog_2.png in Resources */,
 				FB1F6AB71CD040F300D1D3DE /* dog.png in Resources */,
+				FBEA96461CD433B2006F5B6A /* pencil-22.png in Resources */,
 				FB1F6AAF1CD040B500D1D3DE /* arrows.png in Resources */,
 				FB1F6AB31CD040B500D1D3DE /* Info.plist in Resources */,
+				FBEA96441CD433AC006F5B6A /* dog-paw2.png in Resources */,
 				FB1F6AB21CD040B500D1D3DE /* Main.storyboard in Resources */,
 				FB1F6AB11CD040B500D1D3DE /* LaunchScreen.storyboard in Resources */,
 				FB1F6AB01CD040B500D1D3DE /* Assets.xcassets in Resources */,
+				FBEA96421CD433A3006F5B6A /* add-contact2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
