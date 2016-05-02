@@ -6,6 +6,9 @@
 //  Copyright © 2016 TEAM PUE. All rights reserved.
 //
 
+import Parse
+import Bolts
+
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let configuration = ParseClientConfiguration {
+            $0.clientKey = "RB9tawe69dleTsmCl8qB00ELFVsAszapoSsuCySx"
+            $0.applicationId = "n0FFZTsffuZOpeagkIWHwrGxez8KJZeXIcvwgW6M"
+            $0.server = "https://parseapi.back4app.com/"
+        }
+        Parse.initializeWithConfiguration(configuration)
+        
         return true
     }
 

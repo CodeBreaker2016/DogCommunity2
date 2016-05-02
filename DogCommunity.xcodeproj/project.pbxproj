@@ -17,6 +17,18 @@
 		FB1F6AB41CD040B500D1D3DE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */; };
 		FB1F6AB51CD040B500D1D3DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */; };
 		FB1F6AB71CD040F300D1D3DE /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F6AB61CD040F300D1D3DE /* dog.png */; };
+		FB90B6241CD7E24600D3D42A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6231CD7E24600D3D42A /* Parse.framework */; };
+		FB90B6261CD7E25400D3D42A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6251CD7E25400D3D42A /* Bolts.framework */; };
+		FB90B6281CD7E28D00D3D42A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6271CD7E28D00D3D42A /* AudioToolbox.framework */; };
+		FB90B62A1CD7E29600D3D42A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6291CD7E29600D3D42A /* CFNetwork.framework */; };
+		FB90B62C1CD7E29C00D3D42A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B62B1CD7E29C00D3D42A /* CoreGraphics.framework */; };
+		FB90B62E1CD7E2A400D3D42A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B62D1CD7E2A400D3D42A /* CoreLocation.framework */; };
+		FB90B6301CD7E2AB00D3D42A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B62F1CD7E2AB00D3D42A /* QuartzCore.framework */; };
+		FB90B6321CD7E2B300D3D42A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6311CD7E2B300D3D42A /* Security.framework */; };
+		FB90B6341CD7E2B900D3D42A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6331CD7E2B900D3D42A /* StoreKit.framework */; };
+		FB90B6361CD7E2C200D3D42A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6351CD7E2C200D3D42A /* SystemConfiguration.framework */; };
+		FB90B6381CD7E2CD00D3D42A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6371CD7E2CD00D3D42A /* libz.tbd */; };
+		FB90B63A1CD7E2DB00D3D42A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6391CD7E2DB00D3D42A /* libsqlite3.tbd */; };
 		FBCEE03B1CD0254D00AEDF7A /* DogCommunityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */; };
 		FBCEE0461CD0254D00AEDF7A /* DogCommunityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */; };
 		FBD11C741CD15B960097EF70 /* diggy_dog_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD11C731CD15B960097EF70 /* diggy_dog_2.png */; };
@@ -53,6 +65,18 @@
 		FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB1F6AB61CD040F300D1D3DE /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		FB90B6231CD7E24600D3D42A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FB90B6251CD7E25400D3D42A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FB90B6271CD7E28D00D3D42A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FB90B6291CD7E29600D3D42A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FB90B62B1CD7E29C00D3D42A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB90B62D1CD7E2A400D3D42A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FB90B62F1CD7E2AB00D3D42A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB90B6311CD7E2B300D3D42A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FB90B6331CD7E2B900D3D42A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FB90B6351CD7E2C200D3D42A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FB90B6371CD7E2CD00D3D42A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FB90B6391CD7E2DB00D3D42A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FBCEE0221CD0254D00AEDF7A /* DogCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE0361CD0254D00AEDF7A /* DogCommunityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogCommunityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCommunityTests.swift; sourceTree = "<group>"; };
@@ -61,9 +85,9 @@
 		FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCommunityUITests.swift; sourceTree = "<group>"; };
 		FBCEE0471CD0254D00AEDF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBD11C731CD15B960097EF70 /* diggy_dog_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diggy_dog_2.png; sourceTree = "<group>"; };
-		FBEA96411CD433A3006F5B6A /* add-contact2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-contact2.png"; sourceTree = "<group>"; };
-		FBEA96431CD433AC006F5B6A /* dog-paw2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-paw2.png"; sourceTree = "<group>"; };
-		FBEA96451CD433B2006F5B6A /* pencil-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil-22.png"; sourceTree = "<group>"; };
+		FBEA96411CD433A3006F5B6A /* add-contact2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-contact2.png"; path = "../add-contact2.png"; sourceTree = "<group>"; };
+		FBEA96431CD433AC006F5B6A /* dog-paw2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dog-paw2.png"; path = "../dog-paw2.png"; sourceTree = "<group>"; };
+		FBEA96451CD433B2006F5B6A /* pencil-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pencil-22.png"; path = "../pencil-22.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +95,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB90B63A1CD7E2DB00D3D42A /* libsqlite3.tbd in Frameworks */,
+				FB90B6381CD7E2CD00D3D42A /* libz.tbd in Frameworks */,
+				FB90B6361CD7E2C200D3D42A /* SystemConfiguration.framework in Frameworks */,
+				FB90B6341CD7E2B900D3D42A /* StoreKit.framework in Frameworks */,
+				FB90B6321CD7E2B300D3D42A /* Security.framework in Frameworks */,
+				FB90B6301CD7E2AB00D3D42A /* QuartzCore.framework in Frameworks */,
+				FB90B62E1CD7E2A400D3D42A /* CoreLocation.framework in Frameworks */,
+				FB90B62C1CD7E29C00D3D42A /* CoreGraphics.framework in Frameworks */,
+				FB90B62A1CD7E29600D3D42A /* CFNetwork.framework in Frameworks */,
+				FB90B6281CD7E28D00D3D42A /* AudioToolbox.framework in Frameworks */,
+				FB90B6261CD7E25400D3D42A /* Bolts.framework in Frameworks */,
+				FB90B6241CD7E24600D3D42A /* Parse.framework in Frameworks */,
 				FB0938221CD02DB900F801D2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,28 +131,48 @@
 		FB1F6AA31CD040B500D1D3DE /* DogCommunity */ = {
 			isa = PBXGroup;
 			children = (
-				FB1F6AA41CD040B500D1D3DE /* AppDelegate.swift */,
-				FB1F6AA51CD040B500D1D3DE /* arrows.png */,
 				FB1F6AA61CD040B500D1D3DE /* Assets.xcassets */,
+				FB90B6221CD7DF7100D3D42A /* Images */,
+				FB1F6AA41CD040B500D1D3DE /* AppDelegate.swift */,
+				FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */,
+				FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */,
 				FB1F6AA71CD040B500D1D3DE /* LaunchScreen.storyboard */,
 				FB1F6AA91CD040B500D1D3DE /* Main.storyboard */,
-				FB1F6AB61CD040F300D1D3DE /* dog.png */,
 				FB1F6AAB1CD040B500D1D3DE /* Info.plist */,
-				FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */,
-				FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */,
-				FBD11C731CD15B960097EF70 /* diggy_dog_2.png */,
 			);
 			path = DogCommunity;
+			sourceTree = "<group>";
+		};
+		FB90B6221CD7DF7100D3D42A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FB1F6AA51CD040B500D1D3DE /* arrows.png */,
+				FB1F6AB61CD040F300D1D3DE /* dog.png */,
+				FBD11C731CD15B960097EF70 /* diggy_dog_2.png */,
+				FBEA96451CD433B2006F5B6A /* pencil-22.png */,
+				FBEA96431CD433AC006F5B6A /* dog-paw2.png */,
+				FBEA96411CD433A3006F5B6A /* add-contact2.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		FBCEE0191CD0254D00AEDF7A = {
 			isa = PBXGroup;
 			children = (
-				FBEA96451CD433B2006F5B6A /* pencil-22.png */,
-				FBEA96431CD433AC006F5B6A /* dog-paw2.png */,
-				FBEA96411CD433A3006F5B6A /* add-contact2.png */,
-				FB1F6AA31CD040B500D1D3DE /* DogCommunity */,
+				FB90B6391CD7E2DB00D3D42A /* libsqlite3.tbd */,
+				FB90B6371CD7E2CD00D3D42A /* libz.tbd */,
+				FB90B6351CD7E2C200D3D42A /* SystemConfiguration.framework */,
+				FB90B6331CD7E2B900D3D42A /* StoreKit.framework */,
+				FB90B6311CD7E2B300D3D42A /* Security.framework */,
+				FB90B62F1CD7E2AB00D3D42A /* QuartzCore.framework */,
+				FB90B62D1CD7E2A400D3D42A /* CoreLocation.framework */,
+				FB90B62B1CD7E29C00D3D42A /* CoreGraphics.framework */,
+				FB90B6291CD7E29600D3D42A /* CFNetwork.framework */,
+				FB90B6271CD7E28D00D3D42A /* AudioToolbox.framework */,
+				FB90B6251CD7E25400D3D42A /* Bolts.framework */,
+				FB90B6231CD7E24600D3D42A /* Parse.framework */,
 				FB0938211CD02DB900F801D2 /* MapKit.framework */,
+				FB1F6AA31CD040B500D1D3DE /* DogCommunity */,
 				FBCEE0391CD0254D00AEDF7A /* DogCommunityTests */,
 				FBCEE0441CD0254D00AEDF7A /* DogCommunityUITests */,
 				FBCEE0231CD0254D00AEDF7A /* Products */,
@@ -433,6 +489,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DogCommunity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TEAM.DogCommunity;
@@ -444,6 +504,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DogCommunity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TEAM.DogCommunity;
