@@ -76,15 +76,15 @@ class AccountViewController: UIViewController {
         
         firstNameField.enabled = true
         
-        firstNameField.borderStyle = UITextBorderStyle.RoundedRect
+        firstNameField.borderStyle = UITextBorderStyle.Line
         
         lastNameField.enabled = true
         
-        lastNameField.borderStyle = UITextBorderStyle.RoundedRect
+        lastNameField.borderStyle = UITextBorderStyle.Line
             
         eMailField.enabled = true
         
-        eMailField.borderStyle = UITextBorderStyle.RoundedRect
+        eMailField.borderStyle = UITextBorderStyle.Line
         
         editButton.hidden = true
         

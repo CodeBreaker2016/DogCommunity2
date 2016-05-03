@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var petList = [PFObject]()
     
-    let textCellIdentifier = "petCell"
+    let textCellIdentifier = "aPetCell"
     
     //----------------------------------------------------------------
     
@@ -53,7 +53,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                     
                     self.petList = objects!
                     
-                    print(self.petList.count)
+                    print(objects.debugDescription)
                 }
             }
 
@@ -89,21 +89,21 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        return 1
+        return petList.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return petList.count
+        return 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
         
-        let row = indexPath.row
+        cell.textLabel?.text = petList[indexPath.section] as? String
         
-        cell.textLabel?.text = petList[row] as! String
+        cell.detailTextLabel?.text = petList[indexPath.row] as? String
         
         return cell
     }

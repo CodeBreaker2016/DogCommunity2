@@ -9,12 +9,13 @@ import Parse
 
 import UIKit
 
-class FriendsViewController: UIViewController {
+class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet weak var ProfileButton: UIButton!
     
     @IBOutlet weak var userImage: UIImageView!
     
+    @IBOutlet weak var friendsTableView: UITableView!
     //--------------------------------------------------------------------
     
     override func viewDidLoad() {
@@ -63,4 +64,22 @@ class FriendsViewController: UIViewController {
     
     //--------------------------------------------------------------------
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = String.init(indexPath.row)
+        
+        return cell
+    }
 }

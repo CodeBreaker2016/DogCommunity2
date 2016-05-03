@@ -39,6 +39,7 @@
 		FB90B64C1CD85F9E00D3D42A /* Plus-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90B64B1CD85F9E00D3D42A /* Plus-100.png */; };
 		FB90B64E1CD867A700D3D42A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB90B64D1CD867A700D3D42A /* ProfileViewController.swift */; };
 		FB90B6501CD87EAD00D3D42A /* Exit-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90B64F1CD87EAD00D3D42A /* Exit-100.png */; };
+		FBB981931CD94AE900EA6F8C /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB981921CD94AE900EA6F8C /* FindViewController.swift */; };
 		FBCEE03B1CD0254D00AEDF7A /* DogCommunityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */; };
 		FBCEE0461CD0254D00AEDF7A /* DogCommunityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */; };
 		FBD11C741CD15B960097EF70 /* diggy_dog_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD11C731CD15B960097EF70 /* diggy_dog_2.png */; };
@@ -96,6 +97,7 @@
 		FB90B64B1CD85F9E00D3D42A /* Plus-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus-100.png"; sourceTree = "<group>"; };
 		FB90B64D1CD867A700D3D42A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FB90B64F1CD87EAD00D3D42A /* Exit-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Exit-100.png"; sourceTree = "<group>"; };
+		FBB981921CD94AE900EA6F8C /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		FBCEE0221CD0254D00AEDF7A /* DogCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE0361CD0254D00AEDF7A /* DogCommunityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogCommunityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCommunityTests.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				FB90B63F1CD8392600D3D42A /* FriendsViewController.swift */,
 				FB90B6411CD848AF00D3D42A /* AccountViewController.swift */,
 				FB90B64D1CD867A700D3D42A /* ProfileViewController.swift */,
+				FBB981921CD94AE900EA6F8C /* FindViewController.swift */,
 			);
 			path = DogCommunity;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				FB90B6421CD848AF00D3D42A /* AccountViewController.swift in Sources */,
 				FB90B63C1CD7F68E00D3D42A /* RegisterDataViewController.swift in Sources */,
 				FB90B63E1CD811CE00D3D42A /* RegisterPhotoViewController.swift in Sources */,
+				FBB981931CD94AE900EA6F8C /* FindViewController.swift in Sources */,
 				FB90B6401CD8392600D3D42A /* FriendsViewController.swift in Sources */,
 				FB90B64E1CD867A700D3D42A /* ProfileViewController.swift in Sources */,
 				FB1F6AB41CD040B500D1D3DE /* MapViewController.swift in Sources */,
