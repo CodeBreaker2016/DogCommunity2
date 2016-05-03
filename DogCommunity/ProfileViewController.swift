@@ -59,7 +59,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
             let username = (currentUser!.valueForKey("username") as! String)
             
-            usernameLabel.text = "Mascotas de " + username
+            usernameLabel.text = username + " pets"
             
             let myImageFile = currentUser!["profile_picture"] as? PFFile
             

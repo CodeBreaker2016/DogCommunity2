@@ -1046,8 +1046,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ii4-Rx-XVf">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mascotas de &lt;Nombre&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNo-Tt-zGA">
-                                                <rect key="frame" x="217" y="16" width="166" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Nombre&gt; pets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNo-Tt-zGA">
+                                                <rect key="frame" x="246" y="16" width="108" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.5568627451" green="0.3921568627" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1218,10 +1218,10 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="xwN-Al-7mQ"/>
                                         <exclude reference="2el-20-vX7"/>
-                                        <exclude reference="xki-He-JQO"/>
                                         <exclude reference="cqC-ZG-xzR"/>
+                                        <exclude reference="xki-He-JQO"/>
+                                        <exclude reference="xwN-Al-7mQ"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1265,12 +1265,12 @@
         <image name="diggy_dog_2.png" width="1146" height="722"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="re8-o8-KPz"/>
-        <segue reference="1gQ-yQ-I1W"/>
-        <segue reference="YOJ-00-qi7"/>
-        <segue reference="Rut-0p-ex0"/>
-        <segue reference="d3i-C9-UHI"/>
-        <segue reference="M84-nA-2Ww"/>
         <segue reference="iFV-Yw-jXf"/>
+        <segue reference="M84-nA-2Ww"/>
+        <segue reference="d3i-C9-UHI"/>
+        <segue reference="whL-yB-wqZ"/>
+        <segue reference="Rut-0p-ex0"/>
+        <segue reference="jsy-N2-y8c"/>
+        <segue reference="ifL-Yh-ijs"/>
     </inferredMetricsTieBreakers>
 </document>
