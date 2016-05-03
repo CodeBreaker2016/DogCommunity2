@@ -10,12 +10,33 @@ import Parse
 
 import UIKit
 
-class RegisterDataViewController: UIViewController {
+import Foundation
 
+class RegisterDataViewController: UIViewController {
+    
+    var dataArray:[AnyObject] = ["","","","","",UIImage()]
+
+    @IBOutlet weak var firstNameField: UITextField!
+    
+    @IBOutlet weak var lastNameField: UITextField!
+    
+    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBOutlet weak var confirmMailField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        firstNameField.text = (dataArray[0] as! String)
+        lastNameField.text = (dataArray[1] as! String)
+        usernameField.text = (dataArray[2] as! String)
+        emailField.text = (dataArray[3] as! String)
+        confirmMailField.text = (dataArray[3] as! String)
+        passwordField.text = (dataArray[4] as! String)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,15 +44,27 @@ class RegisterDataViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func contnueRegister(sender: AnyObject) {
+        
+        dataArray[0] = firstNameField.text!
+        dataArray[1] = lastNameField.text!
+        dataArray[2] = usernameField.text!
+        dataArray[3] = emailField.text!
+        dataArray[4] = passwordField.text!
+        
+        self.performSegueWithIdentifier("continueToPhoto", sender: dataArray)
     }
-    */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        if (segue.identifier == "continueToPhoto") {
+        
+            let nextViewController = segue.destinationViewController as! RegisterPhotoViewController
+            
+            let dataArray = sender as! [AnyObject]
+            
+            nextViewController.dataArray = dataArray
+        }
+    }
 
 }
