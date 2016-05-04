@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FB0938221CD02DB900F801D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0938211CD02DB900F801D2 /* MapKit.framework */; };
 		FB1F6AAE1CD040B500D1D3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F6AA41CD040B500D1D3DE /* AppDelegate.swift */; };
-		FB1F6AAF1CD040B500D1D3DE /* arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F6AA51CD040B500D1D3DE /* arrows.png */; };
 		FB1F6AB01CD040B500D1D3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1F6AA61CD040B500D1D3DE /* Assets.xcassets */; };
 		FB1F6AB11CD040B500D1D3DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1F6AA71CD040B500D1D3DE /* LaunchScreen.storyboard */; };
 		FB1F6AB21CD040B500D1D3DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1F6AA91CD040B500D1D3DE /* Main.storyboard */; };
@@ -33,18 +32,25 @@
 		FB90B63E1CD811CE00D3D42A /* RegisterPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB90B63D1CD811CE00D3D42A /* RegisterPhotoViewController.swift */; };
 		FB90B6401CD8392600D3D42A /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB90B63F1CD8392600D3D42A /* FriendsViewController.swift */; };
 		FB90B6421CD848AF00D3D42A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB90B6411CD848AF00D3D42A /* AccountViewController.swift */; };
-		FB90B6441CD8538E00D3D42A /* Cancel-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90B6431CD8538E00D3D42A /* Cancel-100.png */; };
-		FB90B6481CD8552D00D3D42A /* Checked-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90B6471CD8552D00D3D42A /* Checked-100.png */; };
-		FB90B64A1CD8585900D3D42A /* Pencil Tip-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90B6491CD8585900D3D42A /* Pencil Tip-100.png */; };
-		FB90B64C1CD85F9E00D3D42A /* Plus-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90B64B1CD85F9E00D3D42A /* Plus-100.png */; };
 		FB90B64E1CD867A700D3D42A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB90B64D1CD867A700D3D42A /* ProfileViewController.swift */; };
-		FB90B6501CD87EAD00D3D42A /* Exit-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90B64F1CD87EAD00D3D42A /* Exit-100.png */; };
 		FBB981931CD94AE900EA6F8C /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB981921CD94AE900EA6F8C /* FindViewController.swift */; };
+		FBB981951CD9A34300EA6F8C /* NewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB981941CD9A34300EA6F8C /* NewPetViewController.swift */; };
+		FBB9819F1CD9AADD00EA6F8C /* Plus Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB9819E1CD9AADD00EA6F8C /* Plus Filled-100.png */; };
+		FBB981A11CD9ABA800EA6F8C /* Camera Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981A01CD9ABA800EA6F8C /* Camera Filled-100.png */; };
+		FBB981A31CD9AC0D00EA6F8C /* Checked Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981A21CD9AC0D00EA6F8C /* Checked Filled-100.png */; };
+		FBB981A51CD9AC7500EA6F8C /* Checked-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981A41CD9AC7500EA6F8C /* Checked-100.png */; };
+		FBB981A71CD9AD0A00EA6F8C /* Cancel Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981A61CD9AD0A00EA6F8C /* Cancel Filled-100.png */; };
+		FBB981A91CD9AD1900EA6F8C /* Cancel-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981A81CD9AD1900EA6F8C /* Cancel-100.png */; };
+		FBB981AF1CDA695900EA6F8C /* arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981AE1CDA695900EA6F8C /* arrows.png */; };
+		FBB981B11CDA69B700EA6F8C /* Circled User Male Filled-500.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981B01CDA69B700EA6F8C /* Circled User Male Filled-500.png */; };
+		FBB981B51CDA6C6E00EA6F8C /* Exit-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981B41CDA6C6E00EA6F8C /* Exit-100.png */; };
+		FBB981B71CDA6CCF00EA6F8C /* Edit Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB981B61CDA6CCF00EA6F8C /* Edit Filled-100.png */; };
+		FBB981B91CDA877D00EA6F8C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB981B81CDA877D00EA6F8C /* ChatViewController.swift */; };
 		FBCEE03B1CD0254D00AEDF7A /* DogCommunityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */; };
 		FBCEE0461CD0254D00AEDF7A /* DogCommunityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */; };
-		FBD11C741CD15B960097EF70 /* diggy_dog_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD11C731CD15B960097EF70 /* diggy_dog_2.png */; };
+		FBD11C741CD15B960097EF70 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD11C731CD15B960097EF70 /* logo.png */; };
 		FBEA96421CD433A3006F5B6A /* add-contact2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEA96411CD433A3006F5B6A /* add-contact2.png */; };
-		FBEA96441CD433AC006F5B6A /* dog-paw2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEA96431CD433AC006F5B6A /* dog-paw2.png */; };
+		FBEA96441CD433AC006F5B6A /* paw.png in Resources */ = {isa = PBXBuildFile; fileRef = FBEA96431CD433AC006F5B6A /* paw.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +73,6 @@
 /* Begin PBXFileReference section */
 		FB0938211CD02DB900F801D2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FB1F6AA41CD040B500D1D3DE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB1F6AA51CD040B500D1D3DE /* arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrows.png; sourceTree = "<group>"; };
 		FB1F6AA61CD040B500D1D3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB1F6AA81CD040B500D1D3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB1F6AAA1CD040B500D1D3DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,13 +96,20 @@
 		FB90B63D1CD811CE00D3D42A /* RegisterPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPhotoViewController.swift; sourceTree = "<group>"; };
 		FB90B63F1CD8392600D3D42A /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		FB90B6411CD848AF00D3D42A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		FB90B6431CD8538E00D3D42A /* Cancel-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cancel-100.png"; sourceTree = "<group>"; };
-		FB90B6471CD8552D00D3D42A /* Checked-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked-100.png"; sourceTree = "<group>"; };
-		FB90B6491CD8585900D3D42A /* Pencil Tip-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pencil Tip-100.png"; sourceTree = "<group>"; };
-		FB90B64B1CD85F9E00D3D42A /* Plus-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus-100.png"; sourceTree = "<group>"; };
 		FB90B64D1CD867A700D3D42A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		FB90B64F1CD87EAD00D3D42A /* Exit-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Exit-100.png"; sourceTree = "<group>"; };
 		FBB981921CD94AE900EA6F8C /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		FBB981941CD9A34300EA6F8C /* NewPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPetViewController.swift; sourceTree = "<group>"; };
+		FBB9819E1CD9AADD00EA6F8C /* Plus Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus Filled-100.png"; sourceTree = "<group>"; };
+		FBB981A01CD9ABA800EA6F8C /* Camera Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera Filled-100.png"; sourceTree = "<group>"; };
+		FBB981A21CD9AC0D00EA6F8C /* Checked Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked Filled-100.png"; sourceTree = "<group>"; };
+		FBB981A41CD9AC7500EA6F8C /* Checked-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked-100.png"; sourceTree = "<group>"; };
+		FBB981A61CD9AD0A00EA6F8C /* Cancel Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cancel Filled-100.png"; sourceTree = "<group>"; };
+		FBB981A81CD9AD1900EA6F8C /* Cancel-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cancel-100.png"; sourceTree = "<group>"; };
+		FBB981AE1CDA695900EA6F8C /* arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrows.png; sourceTree = "<group>"; };
+		FBB981B01CDA69B700EA6F8C /* Circled User Male Filled-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circled User Male Filled-500.png"; sourceTree = "<group>"; };
+		FBB981B41CDA6C6E00EA6F8C /* Exit-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Exit-100.png"; sourceTree = "<group>"; };
+		FBB981B61CDA6CCF00EA6F8C /* Edit Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edit Filled-100.png"; sourceTree = "<group>"; };
+		FBB981B81CDA877D00EA6F8C /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FBCEE0221CD0254D00AEDF7A /* DogCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE0361CD0254D00AEDF7A /* DogCommunityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogCommunityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE03A1CD0254D00AEDF7A /* DogCommunityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCommunityTests.swift; sourceTree = "<group>"; };
@@ -105,9 +117,9 @@
 		FBCEE0411CD0254D00AEDF7A /* DogCommunityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogCommunityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCEE0451CD0254D00AEDF7A /* DogCommunityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCommunityUITests.swift; sourceTree = "<group>"; };
 		FBCEE0471CD0254D00AEDF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBD11C731CD15B960097EF70 /* diggy_dog_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diggy_dog_2.png; sourceTree = "<group>"; };
+		FBD11C731CD15B960097EF70 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		FBEA96411CD433A3006F5B6A /* add-contact2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-contact2.png"; path = "../add-contact2.png"; sourceTree = "<group>"; };
-		FBEA96431CD433AC006F5B6A /* dog-paw2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dog-paw2.png"; path = "../dog-paw2.png"; sourceTree = "<group>"; };
+		FBEA96431CD433AC006F5B6A /* paw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = paw.png; path = ../paw.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +177,8 @@
 				FB90B6411CD848AF00D3D42A /* AccountViewController.swift */,
 				FB90B64D1CD867A700D3D42A /* ProfileViewController.swift */,
 				FBB981921CD94AE900EA6F8C /* FindViewController.swift */,
+				FBB981941CD9A34300EA6F8C /* NewPetViewController.swift */,
+				FBB981B81CDA877D00EA6F8C /* ChatViewController.swift */,
 			);
 			path = DogCommunity;
 			sourceTree = "<group>";
@@ -172,15 +186,19 @@
 		FB90B6221CD7DF7100D3D42A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FB90B64F1CD87EAD00D3D42A /* Exit-100.png */,
-				FB90B64B1CD85F9E00D3D42A /* Plus-100.png */,
-				FB90B6491CD8585900D3D42A /* Pencil Tip-100.png */,
-				FB90B6471CD8552D00D3D42A /* Checked-100.png */,
-				FB90B6431CD8538E00D3D42A /* Cancel-100.png */,
-				FB1F6AA51CD040B500D1D3DE /* arrows.png */,
+				FBB981B61CDA6CCF00EA6F8C /* Edit Filled-100.png */,
+				FBB981B41CDA6C6E00EA6F8C /* Exit-100.png */,
+				FBB981B01CDA69B700EA6F8C /* Circled User Male Filled-500.png */,
+				FBB981AE1CDA695900EA6F8C /* arrows.png */,
+				FBB981A81CD9AD1900EA6F8C /* Cancel-100.png */,
+				FBB981A61CD9AD0A00EA6F8C /* Cancel Filled-100.png */,
+				FBB981A41CD9AC7500EA6F8C /* Checked-100.png */,
+				FBB981A21CD9AC0D00EA6F8C /* Checked Filled-100.png */,
+				FBB981A01CD9ABA800EA6F8C /* Camera Filled-100.png */,
+				FBB9819E1CD9AADD00EA6F8C /* Plus Filled-100.png */,
 				FB1F6AB61CD040F300D1D3DE /* dog.png */,
-				FBD11C731CD15B960097EF70 /* diggy_dog_2.png */,
-				FBEA96431CD433AC006F5B6A /* dog-paw2.png */,
+				FBD11C731CD15B960097EF70 /* logo.png */,
+				FBEA96431CD433AC006F5B6A /* paw.png */,
 				FBEA96411CD433A3006F5B6A /* add-contact2.png */,
 			);
 			name = Images;
@@ -341,20 +359,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB90B6481CD8552D00D3D42A /* Checked-100.png in Resources */,
-				FB90B64C1CD85F9E00D3D42A /* Plus-100.png in Resources */,
-				FBD11C741CD15B960097EF70 /* diggy_dog_2.png in Resources */,
-				FB90B64A1CD8585900D3D42A /* Pencil Tip-100.png in Resources */,
+				FBB981B71CDA6CCF00EA6F8C /* Edit Filled-100.png in Resources */,
+				FBD11C741CD15B960097EF70 /* logo.png in Resources */,
+				FBB981AF1CDA695900EA6F8C /* arrows.png in Resources */,
+				FBB981A91CD9AD1900EA6F8C /* Cancel-100.png in Resources */,
 				FB1F6AB71CD040F300D1D3DE /* dog.png in Resources */,
-				FB1F6AAF1CD040B500D1D3DE /* arrows.png in Resources */,
 				FB1F6AB31CD040B500D1D3DE /* Info.plist in Resources */,
-				FBEA96441CD433AC006F5B6A /* dog-paw2.png in Resources */,
+				FBB981B11CDA69B700EA6F8C /* Circled User Male Filled-500.png in Resources */,
+				FBEA96441CD433AC006F5B6A /* paw.png in Resources */,
+				FBB9819F1CD9AADD00EA6F8C /* Plus Filled-100.png in Resources */,
 				FB1F6AB21CD040B500D1D3DE /* Main.storyboard in Resources */,
 				FB1F6AB11CD040B500D1D3DE /* LaunchScreen.storyboard in Resources */,
 				FB1F6AB01CD040B500D1D3DE /* Assets.xcassets in Resources */,
-				FB90B6501CD87EAD00D3D42A /* Exit-100.png in Resources */,
 				FBEA96421CD433A3006F5B6A /* add-contact2.png in Resources */,
-				FB90B6441CD8538E00D3D42A /* Cancel-100.png in Resources */,
+				FBB981A71CD9AD0A00EA6F8C /* Cancel Filled-100.png in Resources */,
+				FBB981A31CD9AC0D00EA6F8C /* Checked Filled-100.png in Resources */,
+				FBB981B51CDA6C6E00EA6F8C /* Exit-100.png in Resources */,
+				FBB981A51CD9AC7500EA6F8C /* Checked-100.png in Resources */,
+				FBB981A11CD9ABA800EA6F8C /* Camera Filled-100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +403,9 @@
 			files = (
 				FB1F6AB51CD040B500D1D3DE /* ViewController.swift in Sources */,
 				FB1F6AAE1CD040B500D1D3DE /* AppDelegate.swift in Sources */,
+				FBB981B91CDA877D00EA6F8C /* ChatViewController.swift in Sources */,
 				FB90B6421CD848AF00D3D42A /* AccountViewController.swift in Sources */,
+				FBB981951CD9A34300EA6F8C /* NewPetViewController.swift in Sources */,
 				FB90B63C1CD7F68E00D3D42A /* RegisterDataViewController.swift in Sources */,
 				FB90B63E1CD811CE00D3D42A /* RegisterPhotoViewController.swift in Sources */,
 				FBB981931CD94AE900EA6F8C /* FindViewController.swift in Sources */,

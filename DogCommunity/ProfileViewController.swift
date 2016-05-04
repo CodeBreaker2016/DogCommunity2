@@ -13,7 +13,8 @@ import Foundation
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var petsList: UITableView!
+    
+    @IBOutlet weak var petsTableView: UITableView!
     
     @IBOutlet weak var usernameLabel: UILabel!
     
@@ -21,7 +22,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var petList = [PFObject]()
     
-    let textCellIdentifier = "aPetCell"
+    let textCellIdentifier = "petCell"
     
     //----------------------------------------------------------------
     
@@ -29,14 +30,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         super.viewDidLoad()
         
-        petsList.delegate = self
+        petsTableView.delegate = self
         
-        petsList.dataSource = self
+        petsTableView.dataSource = self
         
         let currentUser = PFUser.currentUser()
         
         if currentUser != nil {
-
+            
             let relation = currentUser!.relationForKey("petsRelation")
             
             relation.query().findObjectsInBackgroundWithBlock {
@@ -44,20 +45,17 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                 (objects: [PFObject]?, error: NSError?) -> Void in
                 
                 if let error = error {
-                
+                    
                     print(error)
                 } else {
-                    print("algo se recibio")
-                    
-                    print(objects?.count)
                     
                     self.petList = objects!
                     
-                    print(objects.debugDescription)
+                    self.petsTableView.reloadData()
                 }
             }
-
-            let username = (currentUser!.valueForKey("username") as! String)
+            
+            let username = (currentUser!.valueForKey("name") as! String)
             
             usernameLabel.text = username + " pets"
             
@@ -79,7 +77,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()
@@ -89,32 +87,88 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        return petList.count
+        let tmp = petList.count
+        
+        return tmp
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return 3
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
         
-        cell.textLabel?.text = petList[indexPath.section] as? String
+        switch (indexPath.row) {
         
-        cell.detailTextLabel?.text = petList[indexPath.row] as? String
+        case 0: //race
+            
+            cell.textLabel!.text = "Breed"
+            
+            let content = self.petList[indexPath.section].objectForKey("race")
+            
+            if content != nil {
+                
+                cell.detailTextLabel!.text = String.init(content!)
+            } else {
+                
+                cell.detailTextLabel!.text = "Race not found"
+            }
+            break
+        case 1: //color
+            
+            cell.textLabel!.text = "Color"
+            
+            let content = self.petList[indexPath.section].objectForKey("color")
+            
+            if content != nil {
+                
+                cell.detailTextLabel!.text = String.init(content!)
+            } else {
+                
+                cell.detailTextLabel!.text = "Color not found"
+            }
+            break
+        case 2: //description
+            
+            cell.textLabel!.text = "Description"
+            
+            let content = self.petList[indexPath.section].objectForKey("description")
+            
+            if content != nil {
+                
+                cell.detailTextLabel!.text = String.init(content!)
+            } else {
+                
+                cell.detailTextLabel!.text = "Description not found"
+            }
+            break
+        default: break
+        }
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let name = self.petList[section].objectForKey("name")
         
-        let row = indexPath.row
+        if name != nil {
+            
+            return String.init(name!)
+        } else {
+            
+            return "Pet without name"
+        }
         
-        print(petList[row])
+        
+    }
+    
+    //-----------------------------------------------------------------*
+    
+    @IBAction func addPet(sender: AnyObject) {
     }
 
 }

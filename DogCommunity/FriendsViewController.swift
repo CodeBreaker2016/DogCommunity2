@@ -16,6 +16,11 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var userImage: UIImageView!
     
     @IBOutlet weak var friendsTableView: UITableView!
+    
+    var friendsList = [PFObject]()
+    
+    let textCellIdentifier = "friendCell"
+
     //--------------------------------------------------------------------
     
     override func viewDidLoad() {
@@ -23,6 +28,10 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         
         let currentUser = PFUser.currentUser()
+        
+        friendsTableView.delegate = self
+        
+        friendsTableView.dataSource = self
 
         if currentUser != nil {
             
@@ -42,6 +51,24 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                     }
                 }
             }
+            
+            let relation = currentUser!.relationForKey("friendsRelation")
+            
+            relation.query().findObjectsInBackgroundWithBlock {
+                
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                
+                if let error = error {
+                    
+                    print(error)
+                } else {
+                    
+                    self.friendsList = objects!
+                    
+                    self.friendsTableView.reloadData()
+                }
+            }
+
         } else {
             
             let alertController = UIAlertController(title: "Warning", message: "Conexion with user lost.", preferredStyle: .Alert)
@@ -54,7 +81,6 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
             
             self.performSegueWithIdentifier("logOut", sender: self)
         }
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,15 +96,28 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let tmp = friendsList.count
         
-        return 1
+        return tmp
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
         
-        cell.textLabel?.text = String.init(indexPath.row)
+        let userName = self.friendsList[indexPath.row].objectForKey("username")!
+        
+        cell.textLabel!.text = String.init(userName)
+        
+        let details = self.friendsList[indexPath.row].objectForKey("aboutUser")
+        
+        if details != nil {
+            
+            cell.detailTextLabel!.text = String.init(details!)
+        } else {
+            
+            cell.detailTextLabel!.text = ""
+        }
         
         return cell
     }

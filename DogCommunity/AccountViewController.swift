@@ -17,7 +17,9 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var lastNameField: UITextField!
     
-    @IBOutlet weak var eMailField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBOutlet weak var emailField: UITextField!
     
     @IBOutlet weak var editButton: UIButton!
     
@@ -44,8 +46,10 @@ class AccountViewController: UIViewController {
             firstNameField.text = (currentUser!.valueForKey("name") as! String)
             
             lastNameField.text = (currentUser!.valueForKey("last_name") as! String)
+
+            usernameField.text = (currentUser!.valueForKey("username") as! String)
             
-            eMailField.text = (currentUser!.valueForKey("email") as! String)
+            emailField.text = (currentUser!.valueForKey("email") as! String)
             
             let myImageFile = currentUser!["profile_picture"] as? PFFile
             
@@ -76,15 +80,11 @@ class AccountViewController: UIViewController {
         
         firstNameField.enabled = true
         
-        firstNameField.borderStyle = UITextBorderStyle.Line
-        
         lastNameField.enabled = true
         
-        lastNameField.borderStyle = UITextBorderStyle.Line
-            
-        eMailField.enabled = true
+        usernameField.enabled = true
         
-        eMailField.borderStyle = UITextBorderStyle.Line
+        emailField.enabled = true
         
         editButton.hidden = true
         
@@ -97,15 +97,9 @@ class AccountViewController: UIViewController {
         
         firstNameField.enabled = false
         
-        firstNameField.borderStyle = UITextBorderStyle.None
-        
         lastNameField.enabled = false
         
-        lastNameField.borderStyle = UITextBorderStyle.None
-        
-        eMailField.enabled = false
-        
-        eMailField.borderStyle = UITextBorderStyle.None
+        emailField.enabled = false
         
         let currentUser = PFUser.currentUser()
         
@@ -115,7 +109,9 @@ class AccountViewController: UIViewController {
             
             lastNameField.text = (currentUser!.valueForKey("last_name") as! String)
             
-            eMailField.text = (currentUser!.valueForKey("email") as! String)
+            usernameField.text = (currentUser!.valueForKey("username") as! String)
+            
+            emailField.text = (currentUser!.valueForKey("email") as! String)
         }
         
         editButton.hidden = false
@@ -129,15 +125,11 @@ class AccountViewController: UIViewController {
         
         firstNameField.enabled = false
         
-        firstNameField.borderStyle = UITextBorderStyle.None
-        
         lastNameField.enabled = false
         
-        lastNameField.borderStyle = UITextBorderStyle.None
+        usernameField.enabled = false
         
-        eMailField.enabled = false
-        
-        eMailField.borderStyle = UITextBorderStyle.None
+        emailField.enabled = false
         
         let currentUser = PFUser.currentUser()
         
@@ -147,7 +139,9 @@ class AccountViewController: UIViewController {
 
             currentUser!.setValue(lastNameField.text, forKey: "last_name")
             
-            currentUser!.setValue(eMailField.text, forKey: "email")
+            currentUser!.setValue(usernameField.text, forKey: "username")
+            
+            currentUser!.setValue(emailField.text, forKey: "email")
             
             currentUser!.saveEventually()
         }

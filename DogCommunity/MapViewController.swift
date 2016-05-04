@@ -51,10 +51,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         point.coordinate = userLocation.coordinate
         
-        point.title = "Can you see me?"
-        
-        point.subtitle = "Right Here!"
-        
+        point.title = "Current location"
+                
         map.addAnnotation(point)
     }
 

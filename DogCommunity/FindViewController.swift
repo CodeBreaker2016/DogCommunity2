@@ -10,36 +10,55 @@ import Parse
 
 import UIKit
 
-class FindViewController: UIViewController {
-    
-    @IBOutlet weak var userImage: UIImageView!
+import MapKit
 
+class FindViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    var manager = CLLocationManager()
+    
+    @IBOutlet weak var map: MKMapView!
+    
+    @IBOutlet weak var usersTableView: UITableView!
+    
+    var usersList = [PFObject]()
+    
+    let textCellIdentifier = "userCell"
+    
+    //--------------------------------------------------------------------
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        let currentUser = PFUser.currentUser()
+        usersTableView.delegate = self
         
-        if currentUser != nil {
+        usersTableView.dataSource = self
+        
+        let query : PFQuery = PFUser.query()!
+        
+        query.whereKey("username", notEqualTo: PFUser.currentUser()!.valueForKey("username")!)
+        
+        query.findObjectsInBackgroundWithBlock {
             
-            let myImageFile = currentUser!["profile_picture"] as? PFFile
+            (objects: [PFObject]?, error: NSError?) -> Void in
             
-            myImageFile?.getDataInBackgroundWithBlock {
+            if error == nil {
+            
+                self.usersList = objects!
                 
-                (imageData: NSData?, error: NSError?) -> Void in
+                print(self.usersList.indexOf(PFUser.currentUser()!))
                 
-                if error == nil {
-                    
-                    if let imageData = imageData {
-                        
-                        let theImage = UIImage(data:imageData)
-                        
-                        self.userImage.image = theImage
-                    }
-                }
+                self.usersTableView.reloadData()
             }
+        }
+        
+        map.delegate = self
+        
+        manager.delegate = self
+        
+        if (manager.respondsToSelector(Selector("requestWhenInUseAuthorization"))) {
+            
+            manager.requestWhenInUseAuthorization()
         }
     }
 
@@ -48,6 +67,55 @@ class FindViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    //-------------------------------------------------------------------
     
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        
+        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 700, 700)
+        
+        map.setRegion(map.regionThatFits(region), animated: true)
+        
+        let point = MKPointAnnotation()
+        
+        point.coordinate = userLocation.coordinate
+        
+        point.title = "Current location"
+        
+        map.addAnnotation(point)
+    }
+    
+    //-------------------------------------------------------------------
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let tmp = usersList.count
+        
+        return tmp
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
+        
+        let userName = self.usersList[indexPath.row].objectForKey("username")!
+        
+        cell.textLabel!.text = String.init(userName)
+        
+        let details = self.usersList[indexPath.row].objectForKey("aboutUser")
+        
+        if details != nil {
+            
+            cell.detailTextLabel!.text = String.init(details!)
+        } else {
+            
+            cell.detailTextLabel!.text = ""
+        }
+        
+        return cell
+    }
     
 }

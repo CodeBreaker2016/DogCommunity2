@@ -5,6 +5,7 @@
 //  Created by Alumno on 02/05/16.
 //  Copyright © 2016 TEAM PUE. All rights reserved.
 //
+import Parse
 
 import UIKit
 
@@ -40,10 +41,6 @@ class RegisterPhotoViewController: UIViewController, UIImagePickerControllerDele
         }
         
         self.imageView.image = dataArray![5] as? UIImage
-        
-        print(dataArray?[0])
-        
-        print(dataArray?[1])
     }
     
     override func didReceiveMemoryWarning() {
