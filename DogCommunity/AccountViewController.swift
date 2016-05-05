@@ -50,7 +50,7 @@ class AccountViewController: UIViewController {
             usernameField.text = (currentUser!.valueForKey("username") as! String)
             
             emailField.text = (currentUser!.valueForKey("email") as! String)
-            
+                        
             let myImageFile = currentUser!["profile_picture"] as? PFFile
             
             myImageFile?.getDataInBackgroundWithBlock {
@@ -99,6 +99,8 @@ class AccountViewController: UIViewController {
         
         lastNameField.enabled = false
         
+        usernameField.enabled = false
+
         emailField.enabled = false
         
         let currentUser = PFUser.currentUser()

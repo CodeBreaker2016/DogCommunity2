@@ -11,13 +11,13 @@ import UIKit
 
 class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
-    @IBOutlet weak var ProfileButton: UIButton!
-    
     @IBOutlet weak var userImage: UIImageView!
     
     @IBOutlet weak var friendsTableView: UITableView!
     
     var friendsList = [PFObject]()
+    
+    var chatUser = PFObject()
     
     let textCellIdentifier = "friendCell"
 
@@ -52,7 +52,7 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                 }
             }
             
-            let relation = currentUser!.relationForKey("friendsRelation")
+            let relation = currentUser!.relationForKey("friends")
             
             relation.query().findObjectsInBackgroundWithBlock {
                 
@@ -105,11 +105,28 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
         
-        let userName = self.friendsList[indexPath.row].objectForKey("username")!
+        let userName = self.friendsList[indexPath.row].valueForKey("username")!
         
         cell.textLabel!.text = String.init(userName)
         
-        let details = self.friendsList[indexPath.row].objectForKey("aboutUser")
+        let friendImage = self.friendsList[indexPath.row].objectForKey("profile_picture") as? PFFile
+        
+        friendImage?.getDataInBackgroundWithBlock {
+            
+            (imageData: NSData?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                if let imageData = imageData {
+                    
+                    let theImage = UIImage(data:imageData)
+                    
+                    cell.imageView?.image = theImage
+                }
+            }
+        }
+        
+        let details = self.friendsList[indexPath.row].valueForKey("aboutUser")
         
         if details != nil {
             
@@ -121,4 +138,29 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let friend = self.friendsList[indexPath.row]
+        
+        chatUser = friend
+        
+        self.performSegueWithIdentifier("goChat", sender: chatUser)
+
+    }
+
+    //----------------------------------------------------------------------
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        if (segue.identifier == "goChat") {
+            
+            let nextViewController = segue.destinationViewController as! ChatViewController
+            
+            let chatUser = sender as! PFObject
+            
+            nextViewController.chatUser = chatUser
+        }
+    }
+    
 }

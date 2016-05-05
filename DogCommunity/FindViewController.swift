@@ -12,6 +12,8 @@ import UIKit
 
 import MapKit
 
+import Foundation
+
 class FindViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var manager = CLLocationManager()
@@ -101,11 +103,28 @@ class FindViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
         
-        let userName = self.usersList[indexPath.row].objectForKey("username")!
+        let userName = self.usersList[indexPath.row].valueForKey("name")!
         
         cell.textLabel!.text = String.init(userName)
         
-        let details = self.usersList[indexPath.row].objectForKey("aboutUser")
+        let friendImage = self.usersList[indexPath.row].objectForKey("profile_picture") as? PFFile
+        
+        friendImage?.getDataInBackgroundWithBlock {
+            
+            (imageData: NSData?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                if let imageData = imageData {
+                    
+                    let theImage = UIImage(data:imageData)
+                    
+                    cell.imageView?.image = theImage
+                }
+            }
+        }
+        
+        let details = self.usersList[indexPath.row].valueForKey("aboutUser")
         
         if details != nil {
             
@@ -116,6 +135,61 @@ class FindViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         }
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let msg = self.usersList[indexPath.row].valueForKey("name")!
+        
+        let alertController = UIAlertController(title: "User selected", message: String.init(msg), preferredStyle: .Alert)
+        
+        let confirmAction = UIAlertAction(title: "Add", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            
+            let relation : PFRelation = PFUser.currentUser()!.relationForKey("friends")
+            
+            relation.addObject(self.usersList[indexPath.row])
+            
+            PFUser.currentUser()!.saveEventually()
+            
+            
+            
+            let query : PFQuery = PFUser.query()!
+            
+            query.whereKey("username", equalTo: String.init(self.usersList[indexPath.row].valueForKey("username")!))
+            
+            query.findObjectsInBackgroundWithBlock {
+                
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                
+                if error == nil {
+                    
+                    print(objects![0].debugDescription)
+                    
+                    let relation2 : PFRelation = objects![0].relationForKey("friends")
+                    
+                    relation2.addObject(PFUser.currentUser()!)
+                    
+                    objects?[0].setObject(relation2, forKey: "friends")
+                }
+            }
+            
+            
+            
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+        
+        alertController.addAction(confirmAction)
+        
+        alertController.addAction(cancelAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
 }

@@ -20,8 +20,10 @@ class ViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password:passwordField.text!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
+                
                 self.performSegueWithIdentifier("logUser", sender:self)
             } else {
+                
                 let alertController = UIAlertController(title: "Log In failed", message: "Wrong username or password", preferredStyle: .Alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)

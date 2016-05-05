@@ -164,21 +164,12 @@
 			isa = PBXGroup;
 			children = (
 				FB1F6AA61CD040B500D1D3DE /* Assets.xcassets */,
-				FB90B6221CD7DF7100D3D42A /* Images */,
 				FB1F6AA91CD040B500D1D3DE /* Main.storyboard */,
 				FB1F6AA71CD040B500D1D3DE /* LaunchScreen.storyboard */,
 				FB1F6AA41CD040B500D1D3DE /* AppDelegate.swift */,
-				FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */,
-				FB90B63B1CD7F68E00D3D42A /* RegisterDataViewController.swift */,
-				FB90B63D1CD811CE00D3D42A /* RegisterPhotoViewController.swift */,
-				FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */,
+				FBB981BA1CDADF4200EA6F8C /* Controllers */,
+				FB90B6221CD7DF7100D3D42A /* Images */,
 				FB1F6AAB1CD040B500D1D3DE /* Info.plist */,
-				FB90B63F1CD8392600D3D42A /* FriendsViewController.swift */,
-				FB90B6411CD848AF00D3D42A /* AccountViewController.swift */,
-				FB90B64D1CD867A700D3D42A /* ProfileViewController.swift */,
-				FBB981921CD94AE900EA6F8C /* FindViewController.swift */,
-				FBB981941CD9A34300EA6F8C /* NewPetViewController.swift */,
-				FBB981B81CDA877D00EA6F8C /* ChatViewController.swift */,
 			);
 			path = DogCommunity;
 			sourceTree = "<group>";
@@ -202,6 +193,23 @@
 				FBEA96411CD433A3006F5B6A /* add-contact2.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		FBB981BA1CDADF4200EA6F8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */,
+				FB90B63B1CD7F68E00D3D42A /* RegisterDataViewController.swift */,
+				FB90B63D1CD811CE00D3D42A /* RegisterPhotoViewController.swift */,
+				FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */,
+				FB90B63F1CD8392600D3D42A /* FriendsViewController.swift */,
+				FB90B6411CD848AF00D3D42A /* AccountViewController.swift */,
+				FB90B64D1CD867A700D3D42A /* ProfileViewController.swift */,
+				FBB981921CD94AE900EA6F8C /* FindViewController.swift */,
+				FBB981941CD9A34300EA6F8C /* NewPetViewController.swift */,
+				FBB981B81CDA877D00EA6F8C /* ChatViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		FBCEE0191CD0254D00AEDF7A = {

@@ -40,7 +40,12 @@ class RegisterPhotoViewController: UIViewController, UIImagePickerControllerDele
             self.presentViewController(alert, animated: true, completion: nil)
         }
         
-        self.imageView.image = dataArray![5] as? UIImage
+        let obtainedImage = dataArray![5] as? UIImage
+        
+        if obtainedImage != nil {
+            
+            self.imageView.image =  obtainedImage
+        }
     }
     
     override func didReceiveMemoryWarning() {
