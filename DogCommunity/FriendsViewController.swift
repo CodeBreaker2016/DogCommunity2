@@ -138,7 +138,7 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         return cell
     }
-    
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let friend = self.friendsList[indexPath.row]

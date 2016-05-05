@@ -1646,8 +1646,6 @@
                         <outlet property="chatTableView" destination="GTv-lo-PWJ" id="VDO-cj-Mem"/>
                         <outlet property="friendImage" destination="nZE-LG-HZJ" id="QTs-zB-D6F"/>
                         <outlet property="friendName" destination="JnX-nU-cfK" id="N6c-gx-RGw"/>
-                        <outlet property="friendsTableView" destination="GTv-lo-PWJ" id="1Tq-Fc-NkD"/>
-                        <outlet property="userImage" destination="nZE-LG-HZJ" id="ug4-jV-S7N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c55-bL-Kka" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1668,11 +1666,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="McQ-C3-9kX"/>
-        <segue reference="tes-jU-yHO"/>
+        <segue reference="w0N-hh-hpB"/>
         <segue reference="d3i-C9-UHI"/>
+        <segue reference="M84-nA-2Ww"/>
+        <segue reference="3VP-bz-bzt"/>
         <segue reference="vez-K3-vsK"/>
         <segue reference="42P-t8-bxT"/>
-        <segue reference="M84-nA-2Ww"/>
-        <segue reference="iFV-Yw-jXf"/>
     </inferredMetricsTieBreakers>
 </document>

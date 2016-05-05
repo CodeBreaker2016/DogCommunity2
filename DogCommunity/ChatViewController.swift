@@ -25,6 +25,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         super.viewDidLoad()
         
+        chatTableView.delegate = self
+        
+        chatTableView.dataSource = self
+        
         friendName!.text = (chatUser.valueForKey("name")! as! String)
     }
 
@@ -41,6 +45,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         let tmp = 1
         
         return tmp
