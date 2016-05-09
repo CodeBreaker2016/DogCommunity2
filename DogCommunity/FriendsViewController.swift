@@ -5,9 +5,12 @@
 //  Created by Alumno on 02/05/16.
 //  Copyright © 2016 TEAM PUE. All rights reserved.
 //
+
 import Parse
 
 import UIKit
+
+import Foundation
 
 class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
@@ -48,6 +51,10 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                         let theImage = UIImage(data:imageData)
                         
                         self.userImage.image = theImage
+                        
+                        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2
+                        
+                        self.userImage.clipsToBounds = true
                     }
                 }
             }
@@ -69,17 +76,6 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                 }
             }
 
-        } else {
-            
-            let alertController = UIAlertController(title: "Warning", message: "Conexion with user lost.", preferredStyle: .Alert)
-            
-            let defaultAction = UIAlertAction(title: "GO BACK", style: .Default, handler: nil)
-            
-            alertController.addAction(defaultAction)
-            
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
-            self.performSegueWithIdentifier("logOut", sender: self)
         }
     }
 
@@ -144,6 +140,8 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         let friend = self.friendsList[indexPath.row]
         
         chatUser = friend
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         self.performSegueWithIdentifier("goChat", sender: chatUser)
 

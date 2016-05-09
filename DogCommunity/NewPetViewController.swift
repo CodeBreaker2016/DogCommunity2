@@ -54,6 +54,10 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         self.petImage.image = (img as! UIImage)
         
+        self.petImage.layer.cornerRadius = self.petImage.frame.size.width / 2
+        
+        self.petImage.clipsToBounds = true
+        
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     

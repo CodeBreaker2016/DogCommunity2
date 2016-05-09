@@ -48,8 +48,6 @@ class FindViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             
                 self.usersList = objects!
                 
-                print(self.usersList.indexOf(PFUser.currentUser()!))
-                
                 self.usersTableView.reloadData()
             }
         }
@@ -119,7 +117,7 @@ class FindViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                     
                     let theImage = UIImage(data:imageData)
                     
-                    cell.imageView?.image = theImage
+                    cell.imageView!.image = theImage
                 }
             }
         }

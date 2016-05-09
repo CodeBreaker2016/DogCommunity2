@@ -72,6 +72,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                         let theImage = UIImage(data:imageData)
                         
                         self.userImage.image = theImage
+                        
+                        self.userImage.layer.cornerRadius = self.userImage.frame.size.height / 2
+                        
+                        self.userImage.clipsToBounds = true
+
                     }
                 }
             }
@@ -162,8 +167,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             
             return "Pet without name"
         }
-        
-        
     }
     
     //-----------------------------------------------------------------*

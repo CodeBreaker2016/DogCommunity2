@@ -9,7 +9,7 @@ import Parse
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class AccountViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var userImage: UIImageView!
     
@@ -27,6 +27,9 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var confirmButton: UIButton!
     
+    @IBOutlet weak var galleryButton: UIButton!
+    
+    @IBOutlet weak var logOutButton: UIButton!
     //--------------------------------------------------------------------------
     
     override func viewDidLoad() {
@@ -37,7 +40,11 @@ class AccountViewController: UIViewController {
         
         confirmButton.hidden = true
         
+        galleryButton.hidden = true
+        
         editButton.hidden = false
+        
+        logOutButton.hidden = false
         
         let currentUser = PFUser.currentUser()
         
@@ -64,6 +71,10 @@ class AccountViewController: UIViewController {
                         let theImage = UIImage(data:imageData)
                         
                         self.userImage.image = theImage
+                        
+                        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2
+                        
+                        self.userImage.clipsToBounds = true
                     }
                 }
             }
@@ -88,9 +99,13 @@ class AccountViewController: UIViewController {
         
         editButton.hidden = true
         
+        logOutButton.hidden = true
+        
         confirmButton.hidden = false
         
         cancelButton.hidden = false
+        
+        galleryButton.hidden = false
     }
     
     @IBAction func cancelEdit(sender: AnyObject) {
@@ -118,9 +133,13 @@ class AccountViewController: UIViewController {
         
         editButton.hidden = false
         
+        logOutButton.hidden = false
+        
         confirmButton.hidden = true
         
         cancelButton.hidden = true
+        
+        galleryButton.hidden = true
     }
     
     @IBAction func confirmEdit(sender: AnyObject) {
@@ -145,19 +164,64 @@ class AccountViewController: UIViewController {
             
             currentUser!.setValue(emailField.text, forKey: "email")
             
+            let imageData = UIImagePNGRepresentation(self.userImage.image!)
+            
+            let imageFile = PFFile(name:"myProfileImage.png", data:imageData!)
+            
+            currentUser!["profile_picture"] = imageFile
+            
             currentUser!.saveEventually()
         }
         
         editButton.hidden = false
         
+        logOutButton.hidden = false
+        
         confirmButton.hidden = true
         
         cancelButton.hidden = true
+        
+        galleryButton.hidden = true
+    }
+    
+    //----------------------------------------------------------------------------
+    
+    @IBAction func changePhoto(sender: AnyObject) {
+        
+        let picker = UIImagePickerController()
+        
+        picker.delegate = self
+        
+        picker.allowsEditing = true
+        
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        let img = info [UIImagePickerControllerEditedImage]
+        
+        self.userImage.image = (img as! UIImage)
+        
+        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2
+        
+        self.userImage.clipsToBounds = true
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     //----------------------------------------------------------------------------
     
     @IBAction func logOut(sender: AnyObject) {
+        
         PFUser.logOut()
         
         self.performSegueWithIdentifier("logOutUser", sender: self)

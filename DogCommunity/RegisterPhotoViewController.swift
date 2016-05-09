@@ -29,22 +29,15 @@ class RegisterPhotoViewController: UIViewController, UIImagePickerControllerDele
         
         super.viewDidLoad()
         
-        if(!UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
-            
-            let alert = UIAlertController(title: "Warning", message: "Device has no camera", preferredStyle: .Alert)
-            
-            let okAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
-            
-            alert.addAction(okAction)
-            
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-        
         let obtainedImage = dataArray![5] as? UIImage
         
-        if obtainedImage != nil {
+        if obtainedImage != nil{
             
             self.imageView.image =  obtainedImage
+            
+            self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
+            
+            self.imageView.clipsToBounds = true
         }
     }
     
@@ -69,16 +62,28 @@ class RegisterPhotoViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func cameraPhoto(sender: AnyObject) {
-    
-        let picker = UIImagePickerController()
         
-        picker.delegate = self
-        
-        picker.allowsEditing = true
-        
-        picker.sourceType = UIImagePickerControllerSourceType.Camera
-        
-        self.presentViewController(picker, animated: true, completion: nil)
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
+            
+            let picker = UIImagePickerController()
+            
+            picker.delegate = self
+            
+            picker.allowsEditing = true
+            
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            
+            self.presentViewController(picker, animated: true, completion: nil)
+        } else {
+            
+            let alert = UIAlertController(title: "Warning", message: "Device has no camera", preferredStyle: .Alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     //------------------------------------------------------------------------
@@ -88,6 +93,10 @@ class RegisterPhotoViewController: UIViewController, UIImagePickerControllerDele
         let img = info [UIImagePickerControllerEditedImage]
         
         self.imageView.image = (img as! UIImage)
+        
+        self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
+        
+        self.imageView.clipsToBounds = true
         
         picker.dismissViewControllerAnimated(true, completion: nil)
         
@@ -106,9 +115,46 @@ class RegisterPhotoViewController: UIViewController, UIImagePickerControllerDele
         self.performSegueWithIdentifier("backToForm", sender: dataArray)
     }
     
-    @IBAction func goToNext(sender: AnyObject) {
+    @IBAction func goToNext(sender: AnyObject) { //now submit
         
-        self.performSegueWithIdentifier("continueToMap", sender: dataArray)
+        let user = PFUser()
+        
+        user.username = dataArray![2] as? String
+        
+        user.password = dataArray![4] as? String
+        
+        user.email = dataArray![3] as? String
+        
+        user["name"] = dataArray![0] as? String
+        
+        user["last_name"] = dataArray![1] as? String
+        
+        let imageData = UIImagePNGRepresentation(dataArray![5] as! UIImage)
+        
+        let imageFile = PFFile(name:"myProfileImage.png", data:imageData!)
+        
+        user["profile_picture"] = imageFile
+        
+        user.signUpInBackgroundWithBlock {
+            
+            (succeeded: Bool, error: NSError?) -> Void in
+            
+            if let error = error {
+                
+                let errorString = error.userInfo["Error"] as? NSString
+                
+                let alertController = UIAlertController(title: "Submit failed", message: errorString as? String, preferredStyle: .Alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+            } else {
+                
+                self.performSegueWithIdentifier("submitAndLogin", sender: self)
+            }
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -116,15 +162,6 @@ class RegisterPhotoViewController: UIViewController, UIImagePickerControllerDele
         if (segue.identifier == "backToForm") {
             
             let nextViewController = segue.destinationViewController as! RegisterDataViewController
-            
-            let dataArray = sender as! [AnyObject]
-            
-            nextViewController.dataArray = dataArray
-        }
-        
-        if (segue.identifier == "continueToMap") {
-            
-            let nextViewController = segue.destinationViewController as! MapViewController
             
             let dataArray = sender as! [AnyObject]
             

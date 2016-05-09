@@ -14,7 +14,7 @@ import Foundation
 
 class RegisterDataViewController: UIViewController {
     
-    var dataArray:[AnyObject] = ["","","","","",UIImage()]
+    var dataArray:[AnyObject] = ["","","","","",UIImage(named: "Circled User Male Filled-500.png")!]
 
     @IBOutlet weak var firstNameField: UITextField!
     
