@@ -17,7 +17,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var chatTableView: UITableView!
     
-    var chatUser = PFObject()
+    var chatUser: PFUser?
     
     //--------------------------------------------------------------
     
@@ -29,7 +29,31 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         chatTableView.dataSource = self
         
-        friendName!.text = (chatUser.valueForKey("name")! as! String)
+        let userName = chatUser!.valueForKey("name")!
+        
+        friendName.text = String.init(userName)
+        
+        let friendImg = chatUser!.objectForKey("profile_picture") as? PFFile
+        
+        friendImg?.getDataInBackgroundWithBlock {
+            
+            (imageData: NSData?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                if let imageData = imageData {
+                    
+                    let theImage = UIImage(data:imageData)
+                    
+                    self.friendImage!.image = theImage
+                    
+                    self.friendImage!.layer.cornerRadius = (self.friendImage!.frame.size.width / 2)
+                    
+                    self.friendImage!.clipsToBounds = true
+                }
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

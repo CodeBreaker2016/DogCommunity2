@@ -16,6 +16,7 @@
 		FB1F6AB41CD040B500D1D3DE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */; };
 		FB1F6AB51CD040B500D1D3DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */; };
 		FB1F6AB71CD040F300D1D3DE /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F6AB61CD040F300D1D3DE /* dog.png */; };
+		FB325D4C1CE1199F00BFB190 /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB325D4B1CE1199F00BFB190 /* MyFriendsViewController.swift */; };
 		FB90B6241CD7E24600D3D42A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6231CD7E24600D3D42A /* Parse.framework */; };
 		FB90B6261CD7E25400D3D42A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6251CD7E25400D3D42A /* Bolts.framework */; };
 		FB90B6281CD7E28D00D3D42A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90B6271CD7E28D00D3D42A /* AudioToolbox.framework */; };
@@ -80,6 +81,7 @@
 		FB1F6AAC1CD040B500D1D3DE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FB1F6AAD1CD040B500D1D3DE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB1F6AB61CD040F300D1D3DE /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		FB325D4B1CE1199F00BFB190 /* MyFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
 		FB90B6231CD7E24600D3D42A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FB90B6251CD7E25400D3D42A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		FB90B6271CD7E28D00D3D42A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -208,6 +210,7 @@
 				FBB981921CD94AE900EA6F8C /* FindViewController.swift */,
 				FBB981941CD9A34300EA6F8C /* NewPetViewController.swift */,
 				FBB981B81CDA877D00EA6F8C /* ChatViewController.swift */,
+				FB325D4B1CE1199F00BFB190 /* MyFriendsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				FB90B63C1CD7F68E00D3D42A /* RegisterDataViewController.swift in Sources */,
 				FB90B63E1CD811CE00D3D42A /* RegisterPhotoViewController.swift in Sources */,
 				FBB981931CD94AE900EA6F8C /* FindViewController.swift in Sources */,
+				FB325D4C1CE1199F00BFB190 /* MyFriendsViewController.swift in Sources */,
 				FB90B6401CD8392600D3D42A /* FriendsViewController.swift in Sources */,
 				FB90B64E1CD867A700D3D42A /* ProfileViewController.swift in Sources */,
 				FB1F6AB41CD040B500D1D3DE /* MapViewController.swift in Sources */,

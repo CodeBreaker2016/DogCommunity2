@@ -1,18 +1,15 @@
 //
-//  FriendsViewController.swift
+//  MyFriendsViewController.swift
 //  DogCommunity
 //
-//  Created by Alumno on 02/05/16.
+//  Created by Alumno on 09/05/16.
 //  Copyright © 2016 TEAM PUE. All rights reserved.
 //
-
 import Parse
 
 import UIKit
 
-import Foundation
-
-class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class MyFriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var userImage: UIImageView!
     
@@ -20,22 +17,20 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var friendsList = [PFObject]()
     
-    var chatUser = PFObject()
-    
     let textCellIdentifier = "friendCell"
-
-    //--------------------------------------------------------------------
+    
+    var chatUser = PFUser()
     
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
-        
-        let currentUser = PFUser.currentUser()
         
         friendsTableView.delegate = self
         
         friendsTableView.dataSource = self
 
+        let currentUser = PFUser.currentUser()
+        
         if currentUser != nil {
             
             let myImageFile = currentUser!["profile_picture"] as? PFFile
@@ -45,16 +40,17 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                 (imageData: NSData?, error: NSError?) -> Void in
                 
                 if error == nil {
-                
-                    if let imageData = imageData {
                     
+                    if let imageData = imageData {
+                        
                         let theImage = UIImage(data:imageData)
                         
                         self.userImage.image = theImage
                         
-                        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2
+                        self.userImage.layer.cornerRadius = self.userImage.frame.size.height / 2
                         
                         self.userImage.clipsToBounds = true
+                        
                     }
                 }
             }
@@ -75,16 +71,14 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                     self.friendsTableView.reloadData()
                 }
             }
-
         }
     }
 
     override func didReceiveMemoryWarning() {
-
         super.didReceiveMemoryWarning()
     }
     
-    //--------------------------------------------------------------------
+    //------------------------------------------------------------------------
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -92,6 +86,7 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         let tmp = friendsList.count
         
         return tmp
@@ -101,7 +96,7 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
         
-        let userName = self.friendsList[indexPath.row].valueForKey("username")!
+        let userName = self.friendsList[indexPath.row].valueForKey("name")!
         
         cell.textLabel!.text = String.init(userName)
         
@@ -118,6 +113,11 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                     let theImage = UIImage(data:imageData)
                     
                     cell.imageView?.image = theImage
+                    
+                    cell.imageView?.layer.cornerRadius = cell.imageView!.frame.size.height / 2
+                    
+                    cell.imageView?.clipsToBounds = true
+
                 }
             }
         }
@@ -134,24 +134,22 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         return cell
     }
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let friend = self.friendsList[indexPath.row]
         
-        chatUser = friend
+        chatUser = friend as! PFUser
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        self.performSegueWithIdentifier("goChat", sender: chatUser)
-
+        self.performSegueWithIdentifier("goToChat", sender: chatUser)
+        
     }
-
-    //----------------------------------------------------------------------
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
-        if (segue.identifier == "goChat") {
+        if (segue.identifier == "goToChat") {
             
             let nextViewController = segue.destinationViewController as! ChatViewController
             
@@ -160,5 +158,4 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
             nextViewController.chatUser = chatUser
         }
     }
-    
 }

@@ -118,6 +118,10 @@ class FindViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                     let theImage = UIImage(data:imageData)
                     
                     cell.imageView!.image = theImage
+                    
+                    cell.imageView!.layer.cornerRadius = cell.imageView!.frame.size.height / 2
+                    
+                    cell.imageView!.clipsToBounds = true
                 }
             }
         }
